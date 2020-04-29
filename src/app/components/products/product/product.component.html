@@ -1,0 +1,69 @@
+<div class="card-dark mt-5">
+    <div class="card-body" >
+        <form #productForm="ngForm" (ngSubmit)="onSubmit(productForm)">
+            <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="productService.selectedProduct.$key">
+            <div class="form-group">
+                <input
+                type="text"
+                class="form-control"
+                name="name"
+                #name="ngModel"
+                [(ngModel)]="productService.selectedProduct.name"
+                placeholder="Add Book Name"
+                id="fondo"
+                style="color: black;"
+                >
+            </div>
+
+            <div class="form-group">
+                <input
+                type="text"
+                class="form-control"
+                name="category"
+                #name="ngModel"
+                [(ngModel)]="productService.selectedProduct.category"
+                placeholder="Add Book Category"
+                id="fondo"
+                style="color: black;"
+                >
+            </div>
+
+            <div class="form-group">
+                <input
+                type="text"
+                class="form-control"
+                name="location"
+                #name="ngModel"
+                [(ngModel)]="productService.selectedProduct.location"
+                placeholder="Add Book Location"
+                id="fondo"
+                style="color: black;"
+                >
+            </div>
+
+            <div class="form-group">
+                <input
+                type="number"
+                class="form-control"
+                name="price"
+                #name="ngModel"
+                [(ngModel)]="productService.selectedProduct.price"
+                placeholder="Add Book Price"
+                id="fondo"
+                style="color: black;"
+                >
+            </div>
+
+            <div class="form-group">
+                <button class="btn btn-dark" type="submit">
+                    <i class="fas fa-plus-circle"></i>Add A Book
+                </button>
+                <button class="btn btn-secondary" type="reset" (click)='resetForm(productForm)'>
+                    <i class="fas fa-sync-alt"></i> Reset
+                </button>
+            </div>
+
+
+        </form>
+    </div>
+</div>
